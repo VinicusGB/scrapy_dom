@@ -3,11 +3,18 @@ __Fonte dos dados:__ <a href="http://diariooficial.imprensaoficial.com.br/nav_v4
 __Solicitante:__ SINDSEP - Secretaria de Educação <br>
 __Problema:__ Transferir os dados do arquivo em PDF baixado do site Imprensa Oficial para o Excel com as seguintes colunas:
 
-- Registro Funcional: Número de registro do funcionário
-- Código Antigo: Antigo código de representação do cargo
-- Código Novo: Novo código de representação do cargo
+- Reg.Fun.: Número de registro do funcionário
+- ID_Cargo_Antigo: Antigo código de representação do cargo
+- ID_Cargo_Novo: Novo código de representação do cargo
 - Nome: Nome do servidor para remoção
-- De (Código): Código de representação da unidade de origem
-- De (Descrição): Unidade de origem
-- Para (Código): Código de representação da unidade de destino
-- Para (Descrição): Unidade de destino
+- ID_De: Código de representação da unidade de origem
+- De: Unidade de origem
+- ID_Para: Código de representação da unidade de destino
+- Para: Unidade de destino
+
+
+
+## Para reproduzir na sua máquina:
+
+1. Instale o Anaconda/Python em seu computador;
+2. Baixe este repositório;
