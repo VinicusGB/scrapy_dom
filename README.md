@@ -38,13 +38,13 @@ O repositório esta organizado da seguinte forma:
 
 Abaixo segue os passos que desenvolvi para realização do projeto:
 
-1. Baixar:
+1. **Baixar:**
     - _Para baixar o DOM utilizei o Script do projeto [Querido Diário]('https://ok.org.br/projetos/querido-diario/'). Confiram a página projeto muito legal._
 
-2. Organizar e Juntar arquivos PDF:
+2. **Organizar e Juntar arquivos PDF:**
     - _Para organizar, juntar e identificar as páginas baixadas utilizei a biblioteca `pymupdf`. Verifique meus testes para verificar qual a melhor biblioteca para trabalhar com pdfs. Em [./ler_pdf]('https://github.com/VinicusGB/sindsep-remocao_pmsp/tree/main/ler_pdf')._
 
-3. Converter:
+3. **Converter:**
     - Para converter o arquivo final para CSV utilizei a biblioteca `tabula`. Pois é a melhor biblioteca para ler pdf's que tenham mais de uma coluna.
 
 ## Para reproduzir na sua máquina:
