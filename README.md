@@ -23,8 +23,6 @@ O DOM-SP é dividido em 7 Seções:
 ## O Projeto
 
 O repositório esta organizado da seguinte forma:
-Listagem de caminhos de pasta para o volume OS
-O número de série do volume é 235F-DA90
 
     ├───ler_pdf # Estudo sobre bibliotecas python para leitura de arquivos pdfs
     │   └───data
@@ -44,7 +42,7 @@ Abaixo segue os passos que desenvolvi para realização do projeto:
     - _Para baixar o DOM utilizei o Script do projeto [Querido Diário]('https://ok.org.br/projetos/querido-diario/'). Confiram a página projeto muito legal._
 
 2. Organizar e Juntar arquivos PDF:
-    - _Para organizar, juntar e identificar as páginas baixadas utilizei a biblioteca `pymupdf`. Verifique meus testes para verificar qual a melhor biblioteca para trabalhar com pdfs. Em ./ler_pdf._
+    - _Para organizar, juntar e identificar as páginas baixadas utilizei a biblioteca `pymupdf`. Verifique meus testes para verificar qual a melhor biblioteca para trabalhar com pdfs. Em [./ler_pdf]('https://github.com/VinicusGB/sindsep-remocao_pmsp/tree/main/ler_pdf')._
 
 3. Converter:
     - Para converter o arquivo final para CSV utilizei a biblioteca `tabula`. Pois é a melhor biblioteca para ler pdf's que tenham mais de uma coluna.
