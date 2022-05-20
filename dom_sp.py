@@ -1,20 +1,24 @@
 from datetime import date, datetime, timedelta
 from os import getcwd, path, listdir, chdir
 from tabula import read_pdf, environment_info, convert_into_by_batch
-import datetime
+from PyPDF2 import PdfFileReader, PdfFileMerger
+import base
 import os
 import fitz as fz
 import tabula
 
+dt_now = base.get_date_today()
+
 
 dt_now = date.today()
-year_edition_dom = dt_now.year - 1955
+year_edition_dom = date.today().year - 1955
 head_dom ='São Paulo, ' + str(year_edition_dom) + ' ('
 if dt_now.weekday() == 0:
         dt_now = dt_now + timedelta(-2)
         dt_now = dt_now.strftime("%Y-%m-%d")
 else:
         dt_now = dt_now.strftime("%Y-%m-%d")
+
 
 BASE_DIR = os.getcwd()
 os.chdir(BASE_DIR)
@@ -49,7 +53,7 @@ edition_dom = search_edition[search_edition.find('(')+1:search_edition.find(')')
 head_dom ='São Paulo, ' + str(year_edition_dom) + ' (' + edition_dom + ')'
 print('Cabeçalho: ' + head_dom)
 
-'''
+
 contexts = ''
 for file_name in list_files_names:
         print('Obtendo conteúdo de: ' + file_name)
@@ -78,10 +82,7 @@ for file_name in list_files_names:
 list_files_names = os.listdir(DIR_DATA)
 list_files_names.sort()
 print(f'### RENAME CONCLUÍDO - Verifique a pasta: {DIR_DATA} ###')
-'''
 
-
-from PyPDF2 import PdfFileReader, PdfFileMerger
 
 pdf_files = [f for f in os.listdir(DIR_DATA) if f.endswith("pdf")]
 merger = PdfFileMerger()
