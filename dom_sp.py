@@ -95,7 +95,7 @@ merger.write(SAVE_DIR + "\\DOM_SP-"+ str(year_edition_dom) + "_" + str(edition_d
 print(f'### MERGE CONCLUÍDO - Verifique a pasta: {SAVE_DIR} ###')
 
 
-print('Convertendo arquivo para CSV')
+print('Convertendo arquivo para TSV')
 area_text = [[42.849,28.172,1209.134,215.329],[42.849,216.314,1210.119,393.621],[42.849,395.591,1210.119,574.868],[42.849,576.838,1207.164,760.055]]
 tabula.convert_into_by_batch(SAVE_DIR,output_format="tsv",area=area_text,pages="all")
 print(f'### CONVERT CONCLUÍDO - Verifique a pasta: {SAVE_DIR} ###')

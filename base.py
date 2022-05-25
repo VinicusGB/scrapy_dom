@@ -110,3 +110,16 @@ def rename_pages_dom():
         return DATA_FILES
 
 
+def save_csv(SAVE_DIR,CONTEXT,NAME_FILE):
+        '''
+                Cria um arquivo com o conteúdo e salva na pasta.
+                        SAVE_DIR  : Diretório para salvar o conteúdo
+                        CONTEXT   : Conteúdo a ser salvo
+                        NAME_FILE : Nome do arquivo para ser salvo
+        '''
+
+        with open(f"{SAVE_DIR}\\{NAME_FILE}.txt","w",encoding='utf-8') as output_file:
+                output_file.write(CONTEXT)
+        
+        return f"{SAVE_DIR}\\{NAME_FILE}.txt"
+
