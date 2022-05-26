@@ -2,4 +2,4 @@
 *.csv
 *.tsv
 *.txt
-.\querido-diario
+querido-diario/
