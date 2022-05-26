@@ -1,2 +1,5 @@
 *.pdf
+*.csv
+*.tsv
+*.txt
 .\querido-diario
