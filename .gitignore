@@ -3,3 +3,4 @@
 *.tsv
 *.txt
 querido-diario/
+.env
