@@ -1,1 +1,2 @@
-import scripts
+from app_domsp import *
+from scripts import *

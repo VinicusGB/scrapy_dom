@@ -16,18 +16,30 @@ class SpSaoPauloSpider(BaseGazetteSpider):
     BASE_URL = "http://diariooficial.imprensaoficial.com.br"
     allowed_domains = ["diariooficial.imprensaoficial.com.br"]
     name = "sp_sao_paulo"
-    start_date = date(2000, 1, 1)
-    '''if start_date == date(2000, 1, 1):
-        until=date.today()
-    else:
-        until = start_date
-'''
+    start_date = date(2017, 6, 1)
+
     def start_requests(self):
         # Need to have the month's name in portuguese for the pdf url
         locale.setlocale(locale.LC_TIME, "pt_BR.UTF-8")
+
+        #Validação de data de início e fim de publicação
+        if self.start_date < date.today():
+            until = self.start_date
+            dtstart = self.start_date
+        else:
+            until = date.today()
+            dtstart = self.start_date
+
+        #Ajusta do for para data de início e fim
+        for day in rrule(freq=DAILY, dtstart=dtstart, until=until):
+            url = f"{self.BASE_URL}/nav_v6/header.asp?txtData={day.strftime('%d/%m/%Y')}&cad=1"
+            yield scrapy.Request(url, cb_kwargs=dict(day=day.date()))
+
+        '''
         for day in rrule(freq=DAILY, dtstart=self.start_date, until=date.today()):
             url = f"{self.BASE_URL}/nav_v6/header.asp?txtData={day.strftime('%d/%m/%Y')}&cad=1"
             yield scrapy.Request(url, cb_kwargs=dict(day=day.date()))
+        '''
 
     def get_max_page(self, response):
         page_txt = response.css("span.form-text::text").get()
