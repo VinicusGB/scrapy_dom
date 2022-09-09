@@ -53,24 +53,24 @@ Abaixo segue os passos que desenvolvi para realização do projeto:
 
 2. Baixe esse repositório:
 
-    `$ git clone `
+    git clone
 
 3. Baixe o repositório do projeto querido-diario:
 
-    [Confira: Querido Diário]('https://ok.org.br/projetos/querido-diario/').
-
+    <a href="https://ok.org.br/projetos/querido-diario/" target="_blank">Confira: Querido Diário</a>
+    
 4. Crie um ambiente virtual:
 
-    `$ python -m venv env_dom`
+    python -m venv env_dom
 
 5. Ative o novo ambiente:
 
-    `$ source .\env_dom\bin\activate`
+    source .\env_dom\bin\activate
 
 6. Na pasta do projeto:
 
-    `$ pip install -r requirements.txt`
+    pip install -r requirements.txt
 
 7. Rode o script dom_sp:
 
-    `$ python dom_sp.py`
+    python dom_sp.py
