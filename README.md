@@ -53,7 +53,7 @@ Abaixo segue os passos que desenvolvi para realização do projeto:
 
 2. Baixe esse repositório:
 
-        git clone
+        git clone https://github.com/VinicusGB/scrapy_dom
 
 3. Baixe o repositório do projeto querido-diario:
 
