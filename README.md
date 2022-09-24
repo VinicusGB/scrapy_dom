@@ -1,4 +1,4 @@
-# Ler D.O.M-SP (Diário Oficial do Município de São Paulo)
+# Scraping D.O.M-SP (Diário Oficial do Município de São Paulo)
 
 Este projeto tem como objetivo consultar/construir as melhores ferramentas para baixar, ler e organizar as informações disponíveis no DOM-SP.
 
@@ -24,15 +24,17 @@ O DOM-SP é dividido em 7 Seções:
 
 O repositório esta organizado da seguinte forma:
 
-    ├───ler_pdf # Estudo sobre bibliotecas python para leitura de arquivos pdfs
-    │   └───data
-    │       ├───files_pdf
-    │       └───outputs_ler_pdf
-    ├───querido-diario # Arquivos do projeto querido-diário
+    ├───core # O Núcleo do projeto
+    │   │───dom_sp  # Arquivos do projeto principal
+    │   │   ├───files_pdf
+    │   │   └───outputs_ler_pdf
+    │   └───querido-diario # Arquivos do projeto querido-diário
+    ├───scripts # Scripts de scraping do DOM
     │   └───data_collection
     │       └───data
     │           └───3550308
-    └───scripts # Scripts de scraping do DOM
+    │───tools # Scripts de funcionalidades utilizadas no projetodo DOM
+    └───outputs_files # Arquivos tratados
 
 ## O Estudo
 
@@ -57,8 +59,8 @@ Abaixo segue os passos que desenvolvi para realização do projeto:
 
 3. Baixe o repositório do projeto querido-diario:
 
-    <a href="https://ok.org.br/projetos/querido-diario/" target="_blank">Confira: Querido Diário</a>
-    
+    <a href="https://ok.org.br/projetos/querido-diario/" target="_blank">Querido Diário</a> Confira!!!!
+
 4. Crie um ambiente virtual:
 
         python -m venv env_dom
