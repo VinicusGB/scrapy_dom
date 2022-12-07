@@ -7,4 +7,7 @@ from scripts import *
 
 boas_vindas()
 
-domsp = DOMSP(date(2022,1,1))
+domsp = DOMSP()
+
+http://diariooficial.imprensaoficial.com.br/nav_cidade/index.asp?c=1&e=20221207
+

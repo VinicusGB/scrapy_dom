@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from scripts import *
+from scripts.essentials import boas_vindas, menu_escolha, diario
 
 #pesquisa = consulta_dom_sp("joão gabriel guimarães")
 
