@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from scripts.domsp.classe import DOMSP
+from core.domsp.classe import DOMSP
 from datetime import date
 
 def boas_vindas():
@@ -31,3 +31,4 @@ def diario():
     mes = input('Mês: ')
     dia = input('Dia: ')
     dom_sp = DOMSP(date(int(ano),int(mes),int(dia)))
+    return dom_sp

@@ -1,2 +1,1 @@
-from scripts.listagens.classe import *
-from scripts.listagens.functions import *
+from scripts.listagens.servidores import *

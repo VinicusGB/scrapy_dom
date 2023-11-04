@@ -3,10 +3,11 @@ Funções principais utilizadas na class remoto
 '''
 
 import subprocess
+from functools import reduce
 
 def foi_baixado(self):
     '''Método que verfica se os arquivos foram baixados, tratados e lista os arquivos'''
-    try: return True, subprocess.os.listdir(self.dir)
+    try: return True, subprocess.os.listdir(self.dir.remoto)
     except: return False, []
 
 def foi_tratado(self):
@@ -15,7 +16,7 @@ def foi_tratado(self):
     else: return False
 
 def baixar(self):
-    subprocess.os.chdir('c:\Projetos\scrapy_dom')
+    subprocess.os.chdir(self.dir.base)
     try:
         [subprocess.os.remove(subprocess.os.path.join(self.dir,arquivo)) for arquivo in self.arquivos_baixados]
         subprocess.os.removedirs(self.dir)
@@ -23,5 +24,3 @@ def baixar(self):
     except FileNotFoundError:
         print("Diretório não existe")
         pass 
-
-del subprocess

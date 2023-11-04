@@ -1,7 +1,7 @@
 import subprocess
 from datetime import datetime
 
-from scripts.local.functions import foi_baixado, foi_tratado
+from core.domsp.local.functions import foi_baixado, foi_tratado
 
 class Local():
     '''Classe do diretório local'''
