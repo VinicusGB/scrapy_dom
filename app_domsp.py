@@ -7,12 +7,14 @@ from scripts.essentials import boas_vindas, menu_escolha, diario
 
 boas_vindas()
 
-while True:
-    menu_escolha()
-    escolha = input('Digite uma opção:')
-    if escolha == '0':
-        break
-    elif escolha == '1':
-        break
-    elif escolha == '2':
-        diario()
+
+menu_escolha()
+escolha = input('Digite uma opção:')
+if escolha == '0':
+    # Encerra o programa
+    print('Encerrando o programa...')
+    exit()
+elif escolha == '1':
+    print('Consulta por termo')
+elif escolha == '2':
+    diario = diario()
